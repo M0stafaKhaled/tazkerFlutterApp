@@ -1,3 +1,4 @@
+import 'package:dashboard_flutter_01/werd.dart';
 import 'package:flutter/material.dart';
 
 class CategoryDetails extends StatefulWidget {
@@ -13,6 +14,8 @@ class _CategoryDetailsState extends State<CategoryDetails> {
     {"name": "title 2", "leading": "leading 2"},
     {"name": "title 3", "leading": "leading 3"},
     {"name": "title 4", "leading": "leading 4"},
+    {"name": "title 5", "leading": "leading 5"},
+    {"name": "title 6", "leading": "leading 6"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -43,6 +46,8 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     ],
                   ),
                   child: ListTile(
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Werd())),
                     title: Text(categoriesData[index]['name']),
                     leading: Text(categoriesData[index]['name']),
                     trailing: Text(categoriesData[index]['leading']),

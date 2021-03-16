@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
 
+
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -17,17 +18,15 @@ class _SplashScreenState extends State<SplashScreen> {
     //generateDeviceToken();
     startTime();
   }
-
   startTime() async {
     print("start time");
-    return new Timer(Duration(seconds: 8), checkInternetConnection);
+    return new Timer(Duration(seconds: 3), checkInternetConnection);
   }
-
   void checkInternetConnection() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Home()));
+    // Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+    Navigator.pushAndRemoveUntil(
+        context, MaterialPageRoute(builder: (context) => Home()), (e) => false);
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

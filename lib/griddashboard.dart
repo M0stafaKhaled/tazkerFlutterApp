@@ -9,7 +9,7 @@ class GridDashboard extends StatelessWidget {
   Items item2 = new Items(
     title: "ورد قراني",
     subtitle: "Bocali, Apple",
-    img: "assets/food.png",
+    img: "assets/logo.png",
   );
   Items item3 = new Items(
     title: "thing",
