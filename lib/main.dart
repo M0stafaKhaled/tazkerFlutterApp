@@ -1,11 +1,12 @@
 import 'package:dashboard_flutter_01/splashScreen.dart';
+import 'package:dashboard_flutter_01/werd.dart';
 import 'package:flutter/material.dart';
 
 import 'griddashboard.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: Werd(),
       title: "عباد الرحمن",
       theme: ThemeData(primaryColor: Color(0xff453658)),
     ));
@@ -15,7 +16,8 @@ class Home extends StatefulWidget {
   HomeState createState() => new HomeState();
 }
 
-class HomeState extends State<Home> { 
+//(0xff392850
+class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,10 +56,8 @@ class HomeState extends State<Home> {
                 ),
                 IconButton(
                   alignment: Alignment.topCenter,
-                  icon: Image.asset(
-                    "assets/notification.png",
-                    width: 24,
-                  ),
+                  icon: Icon(Icons.notifications),
+                  color: Colors.white,
                   onPressed: () {
                     print("mostafa");
                   },

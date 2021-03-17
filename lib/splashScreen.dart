@@ -19,6 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     startTime();
   }
   startTime() async {
+
     print("start time");
     return new Timer(Duration(seconds: 3), checkInternetConnection);
   }

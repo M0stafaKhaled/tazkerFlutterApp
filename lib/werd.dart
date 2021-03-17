@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 class Werd extends StatefulWidget {
   @override
@@ -9,19 +10,12 @@ class WerdState extends State<Werd> {
   int selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    // Text(
-    //   'Index 1: Business',
-    //   style: optionStyle,
-    // ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+
+  static List<Widget> widgetOptions = <Widget>[
+    Home(),
+    Center(
+      child: Text("fav"),
+    )
   ];
 
   void onItemTapped(int index) {
@@ -33,14 +27,6 @@ class WerdState extends State<Werd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text("mostafa"),
-        leading: BackButton(
-          color: Colors.white,
-        ),
-        centerTitle: true,
-      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -55,10 +41,10 @@ class WerdState extends State<Werd> {
         currentIndex: selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: onItemTapped,
-        // currentIndex: _selectedIndex,
         // selectedItemColor: Colors.amber[800],
         // onTap: _onItemTapped,
       ),
+      body: widgetOptions.elementAt(selectedIndex),
     );
   }
 }

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class GridDashboard extends StatelessWidget {
+
+  GridDashboard();
   Items item1 = new Items(
       title: "اذكار", subtitle: "March, Wednesday", img: "assets/calendar.png");
 
@@ -16,24 +18,7 @@ class GridDashboard extends StatelessWidget {
     subtitle: "thing",
     img: "assets/map.png",
   );
-  // Items item4 = new Items(
-  //   title: "Activity",
-  //   subtitle: "Rose favirited your Post",
-  //   event: "",
-  //   img: "assets/festival.png",
-  // );
-  // Items item5 = new Items(
-  //   title: "To do",
-  //   subtitle: "Homework, Design",
-  //   event: "4 Items",
-  //   img: "assets/todo.png",
-  // );
-  // Items item6 = new Items(
-  //   title: "Settings",
-  //   subtitle: "",
-  //   event: "2 Items",
-  //   img: "assets/setting.png",
-  // );
+
 
   @override
   Widget build(BuildContext context) {
